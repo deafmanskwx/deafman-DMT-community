@@ -1,44 +1,11 @@
 <h2>Theme Library</h2>
 <ul>
-  <li>Cmd-clicking a Theme Library folder now expands or collapses the current tree while keeping the top-level COMPLETE root stable.</li>
-  <li>Manual imports of older first-party standalone packs now appear correctly under Complete, with the imported pack version selected after import.</li>
-</ul>
-
-<h2>Editor</h2>
-<ul>
-  <li>The Engine eye control now opens Memory and History colour swatches, with persistent favourites, real interaction history, apply actions, and preset context menus.</li>
-  <li>Theme Editor search now keeps a compact recent-search history for parameters, groups, and Blends, available from the search bar or Option+Down.</li>
-  <li>Pressing § opens the Theme Editor reverse colour search picker and expands into the full editor layout when needed.</li>
-  <li>Color suppressor controls now peak cleanly on selected hues, improving targeted chroma reduction.</li>
-</ul>
-
-<h2>Macros</h2>
-<ul>
-  <li>Cmd-clicking a Macro Editor macro title collapses every macro header at once.</li>
-  <li>Macro route range handles now support Snap to Cursor from their context menu.</li>
-  <li>Macro route range fills now support Reset from their context menu.</li>
-  <li>Tint ColourOP now has separate Hue and Saturation macro routes, matching the paired-control workflow used by Grade XY.</li>
-</ul>
-
-<h2>AutoSetup</h2>
-<ul>
-  <li>Selected eligible Theme Library rows now offer a direct SETUP button for launching AutoSetup.</li>
-  <li>Group Setup now separates Simple/Detailed layouts from Z-Depth, with Z-Depth AutoSetup presented as one Near/Mid/Far page.</li>
-  <li>Macro headers now include BYP controls for routed colour operators and drag handles for reordering macros within the active AutoSetup step.</li>
-  <li>AutoSetup macro rows now expose BYP beside the slider, mirroring Macro Editor bypass controls.</li>
+  <li>Matrix slot labels and injected-slot markers now survive quitting and relaunching DMT instead of returning to `Unassigned`.</li>
+  <li>Matrix routing no longer loses themes or preselects a pack because the Theme Library browser has active pack filters.</li>
 </ul>
 
 <h2>Settings</h2>
 <ul>
-  <li>Content updates can now be installed automatically in the background or reviewed manually, with eligible packs listed individually and pending installs available from the Theme Library update control.</li>
-</ul>
-
-<h2>Tracks</h2>
-<ul>
-  <li>Tracks tuneables now include an inline UNIFORM shortcut for toggling track and group uniform-colouring states together.</li>
-  <li>Tracks sensitivity now offers Refresh On Release or Realtime modes from the slider thumb context menu.</li>
-  <li>Tracks analysis labels can now be click-drag painted across rows, matching the existing analysis weight-bar workflow.</li>
-  <li>While the Tracks quick CFG submenu is open, Cmd-scroll adjusts group-member offset directly.</li>
-  <li>Tracks sort controls can cycle HUE, SPREAD, and PING frequencies through 1/2/3 on repeated selection.</li>
-  <li>Tracks UNIFORM now cycles through the final OFF/ALL, combined, group-only, and track-only uniform states.</li>
+  <li>Automatic updates can now finish the downloaded update more reliably because DMT leaves the final quit-and-install handoff with the updater.</li>
+  <li>A newly imported manual pack such as `RED_v2.dmt` appears in Settings &gt; Content Updates immediately when the sheet opens, without waiting for a remote manifest sync.</li>
 </ul>
