@@ -1,16 +1,10 @@
 # DMT Release Notes
 
-Source: `.agent/IMPLEMENTATION_LEDGER.md` entries on or after the newest published release date 2026-06-16.
+Source: `.agent/IMPLEMENTATION_LEDGER.md` entries on or after the newest published release date 2026-06-19.
 
 These notes intentionally include customer-facing improvements only.
 
 ## Theme Library
-
-### Theme Library Live Target Offset
-
-- Theme Library toolbar Live target buttons sit 5pt farther right while retaining their centered overlay behavior.
-- Where: Theme Library toolbar > Live installation target buttons.
-- Note: This is a visual alignment adjustment only; target selection behavior is unchanged.
 
 ### Livesync Factory Backup Fallback
 
@@ -20,17 +14,6 @@ These notes intentionally include customer-facing improvements only.
 
 
 ## Editor
-
-### Editor Group Setup Menu Right Edge
-
-- The Editor sort header Group Setup menu extends 1px farther to the right without moving its left edge or adjacent controls.
-- Where: Editor > sort header > Group Setup menu.
-- Note: Build/test execution was not run because this is a one-line visual width nudge and project instructions avoid broader checks unless needed.
-
-### Save Modal Input Background
-
-- Save Group Setup and Save Lock Group modal text inputs now use background `#151515`.
-- Where: Editor > Group Setup > Save Group Setup; Editor > Save Lock Group.
 
 ### Editor Reverse Pick Child Group
 
@@ -68,18 +51,6 @@ These notes intentionally include customer-facing improvements only.
 
 ## AutoSetup
 
-### Autosetup Dual Pane Shortcut
-
-- `Cmd+A` now launches AutoSetup when focus is in the Engine+Editor dual-pane layout instead of falling through to macOS/editor text handling.
-- Where: Pro layout Engine+Editor dual pane, with the main DMT window active, press `Cmd+A`.
-- Note: Library-visible `Cmd+A` still behaves like the selected row `SETUP` button; Engine+Editor `Cmd+A` opens AutoSetup for the currently loaded theme because the Library receiver is not mounted in that layout.
-
-### Autosetup Detailed Counter Placeholder
-
-- AutoSetup keeps the Simple/Detailed/Z-Depth mode row aligned in Detailed empty-state mode by showing a dimmed step counter instead of removing it.
-- Where: AutoSetup sheet > Detailed mode when no navigable groups are available.
-- Note: Detailed empty state should keep the top controls fixed while communicating that no step is currently available.
-
 ### Autosetup Simple Manual Navigation Only
 
 - AutoSetup Simple mode now navigates only manually assigned steps; blank/unassigned Simple steps no longer appear as automatically mapped fallback groups when clicking through the overlay.
@@ -87,27 +58,7 @@ These notes intentionally include customer-facing improvements only.
 - Note: The investigated stale-theme-cache hypothesis did not explain the reproduced symptom; the failing proof showed navigation-time fallback produced `totalGroups == 3` when only one Simple step was intentionally assigned.
 
 
-## Settings
-
-### Alert Sound Global Setting
-
-- The save-success alert now uses the macOS Jump sound, and the loudspeaker control lives in Settings > Global as the Alert Sound section between Startup and Software Updates.
-- Where: Save-success chime; Settings > Global > Alert Sound.
-- Note: The setting label is positive ("Play alert sound") while the persisted preference key remains `muteChime` for compatibility.
-
-### Remote Test Mode Toolbar Override
-
-- Dev Remote Test Mode content scenarios now override a real Software Update availability state while active.
-- Where: Software Update still wins when content remote test mode is not active.
-
-
 ## Tracks
-
-### Generic Xml Library Tab
-
-- Self-Theming is now presented as Generic XML Mode, with a first-class Library header `XML` tab after Tracks and a Generic XML theme manager that mirrors the Library shell styling.
-- Where: DMT Library header > XML; Settings > Global > Document Mode / Generic XML Themes.
-- Note: Internal `selfTheme` API names remain as compatibility plumbing; user-facing language and schema examples now use Generic XML.
 
 ### Tracks Directive Effective Analysis Sources
 
@@ -168,11 +119,3 @@ These notes intentionally include customer-facing improvements only.
 
 - Each Tracks colour directive now remembers its own analysis source toggle/weight state, including PER THEME storage, after directive switches, theme switches, and app reloads.
 - Where: Tracks tuneables/CFG analysis toggles, GLOBAL colour directive cycling, PER THEME/GLOBAL analysis storage, theme switching, and palette state load/save.
-
-
-## Improvements
-
-### Git Main Worktree Rectification
-
-- Switching the primary workspace to `main` no longer fails because the previous `main` checkout has been moved to a preservation branch.
-- Where: Pre-existing generated/untracked workspace artifacts were left untouched.
