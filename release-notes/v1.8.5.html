@@ -1,13 +1,10 @@
 <h2>Theme Library</h2>
 <ul>
-  <li>Theme Library toolbar Live target buttons sit 5pt farther right while retaining their centered overlay behavior.</li>
   <li>Factory theme backup/restore now refuses identical Dark/Light pairs and only falls back to clean local Ableton backups, with honest partial-restore messaging when none exist.</li>
 </ul>
 
 <h2>Editor</h2>
 <ul>
-  <li>The Editor sort header Group Setup menu extends 1px farther to the right without moving its left edge or adjacent controls.</li>
-  <li>Save Group Setup and Save Lock Group modal text inputs now use background `#151515`.</li>
   <li>`New Group from...` now creates the picked group as a child of the first picked member's existing non-aggregate group, keeping it visually near the source group under alphabetical sorting.</li>
   <li>Confirming `New Group from...` now reveals the newly created child group in the Theme Editor list instead of leaving the viewport where it was.</li>
   <li>Parameter swatches inside deeper nested Theme Editor groups now move into the nested lock column instead of sitting one nesting step left of their parent group header lock; direct Master Grade child rows keep their previous positioning.</li>
@@ -22,20 +19,11 @@
 
 <h2>AutoSetup</h2>
 <ul>
-  <li>`Cmd+A` now launches AutoSetup when focus is in the Engine+Editor dual-pane layout instead of falling through to macOS/editor text handling.</li>
-  <li>AutoSetup keeps the Simple/Detailed/Z-Depth mode row aligned in Detailed empty-state mode by showing a dimmed step counter instead of removing it.</li>
   <li>AutoSetup Simple mode now navigates only manually assigned steps; blank/unassigned Simple steps no longer appear as automatically mapped fallback groups when clicking through the overlay.</li>
-</ul>
-
-<h2>Settings</h2>
-<ul>
-  <li>The save-success alert now uses the macOS Jump sound, and the loudspeaker control lives in Settings &gt; Global as the Alert Sound section between Startup and Software Updates.</li>
-  <li>Dev Remote Test Mode content scenarios now override a real Software Update availability state while active.</li>
 </ul>
 
 <h2>Tracks</h2>
 <ul>
-  <li>Self-Theming is now presented as Generic XML Mode, with a first-class Library header `XML` tab after Tracks and a Generic XML theme manager that mirrors the Library shell styling.</li>
   <li>Switching the Tracks colour directive and skipping through themes now refreshes the effective analysis-source set, so non-qualifying parameters are visibly/effectively inactive and the remaining active sliders tune only sources that actually participate.</li>
   <li>GLOBAL analysis mode is freely editable again while PER THEME mode shows the current theme's effective qualified sources; SBG/Dsk now behave as a 50/50 inverse brightness mix, and VU/Trn are default-off optional contributors.</li>
   <li>ANA now respects reddish/brown theme surfaces as the theme tone instead of accepting opposite blue/cyan accents as analogous matches.</li>
@@ -47,9 +35,4 @@
   <li>GLOBAL analysis mode, with PER THEME off, is freely interactive again; directive filtering no longer makes saved-on sources inert or dark in GLOBAL, while PER THEME still marks directive-filtered saved-on sources as directive-disabled and non-clickable.</li>
   <li>Higher Tracks filter settings now gravitate toward theme-luminance-compatible swatches for TEMP and MONO instead of narrowing by hue/temperature alone.</li>
   <li>Each Tracks colour directive now remembers its own analysis source toggle/weight state, including PER THEME storage, after directive switches, theme switches, and app reloads.</li>
-</ul>
-
-<h2>Improvements</h2>
-<ul>
-  <li>Switching the primary workspace to `main` no longer fails because the previous `main` checkout has been moved to a preservation branch.</li>
 </ul>
