@@ -1,6 +1,6 @@
 # DMT Release Notes
 
-Source: `.agent/IMPLEMENTATION_LEDGER.md` entries on or after the newest published release date 2026-06-15.
+Source: `.agent/IMPLEMENTATION_LEDGER.md` entries on or after the newest published release date 2026-06-16.
 
 These notes intentionally include customer-facing improvements only.
 
@@ -12,6 +12,12 @@ These notes intentionally include customer-facing improvements only.
 - Where: Theme Library toolbar > Live installation target buttons.
 - Note: This is a visual alignment adjustment only; target selection behavior is unchanged.
 
+### Livesync Factory Backup Fallback
+
+- Factory theme backup/restore now refuses identical Dark/Light pairs and only falls back to clean local Ableton backups, with honest partial-restore messaging when none exist.
+- Where: DMT startup LiveSync detection; Settings/DRM Factory Revert.
+- Note: DMT does not ship Ableton factory assets; users need a clean local Ableton install/source for unrecoverable factory slots.
+
 
 ## Editor
 
@@ -21,22 +27,67 @@ These notes intentionally include customer-facing improvements only.
 - Where: Editor > sort header > Group Setup menu.
 - Note: Build/test execution was not run because this is a one-line visual width nudge and project instructions avoid broader checks unless needed.
 
+### Save Modal Input Background
+
+- Save Group Setup and Save Lock Group modal text inputs now use background `#151515`.
+- Where: Editor > Group Setup > Save Group Setup; Editor > Save Lock Group.
+
+### Editor Reverse Pick Child Group
+
+- `New Group from...` now creates the picked group as a child of the first picked member's existing non-aggregate group, keeping it visually near the source group under alphabetical sorting.
+- Where: Theme Editor parameter context menu > `New Group from...`; pick one or more Live UI colours; press Enter to create the group.
+
+### Editor Reverse Pick Group Scroll Reveal
+
+- Confirming `New Group from...` now reveals the newly created child group in the Theme Editor list instead of leaving the viewport where it was.
+- Where: Theme Editor parameter context menu > `New Group from...`; press Enter after one or more reverse picks.
+
+### Editor Nested Group Row Alignment
+
+- Parameter swatches inside deeper nested Theme Editor groups now move into the nested lock column instead of sitting one nesting step left of their parent group header lock; direct Master Grade child rows keep their previous positioning.
+- Where: Theme Editor expanded nested groups, especially groups created under an existing group by `New Group from...`.
+
+### Editor Move To Group Selection Stick
+
+- Moving parameters from the Theme Editor `Move to Group` / `Remove from Group` context menu now collapses selection to the clicked moved parameter and reveals the destination, preventing stale multi-row selection from sticking after nested moves.
+- Where: Theme Editor parameter row context menu > `Move to Group` or `Remove from Group`, especially when moving into a nested group after mixed parameter/group selection.
+- Note: The teal filter-result frame remains driven by `searchHighlightIndex` and `resolvedVisibleSearchResultID` still prioritizes highlighted result, then active selected parameter, then selected IDs, then first visible result.
+
+### Editor Nested Group Row Alignment Cascade
+
+- Theme Editor child rows now cascade cleanly with nested group depth: each nested group advances swatches/operators one 16 pt step from its parent's child-row column.
+- Where: Theme Editor expanded nested groups, especially child groups created under `Selection` or other Master Grade descendants.
+
+
+## Macros
+
+### Macro Mode Colourop Profile Recall
+
+- Macro ColourOP setup now uses one shared Standard bank for Simple/Detailed and one isolated Z-Depth bank. Simple macros routed to Detailed ColourOP groups appear in Detailed with the same macro identity and shared edits, while Detailed-only macros stay Detailed-only.
+
+
+## AutoSetup
+
+### Autosetup Dual Pane Shortcut
+
+- `Cmd+A` now launches AutoSetup when focus is in the Engine+Editor dual-pane layout instead of falling through to macOS/editor text handling.
+- Where: Pro layout Engine+Editor dual pane, with the main DMT window active, press `Cmd+A`.
+- Note: Library-visible `Cmd+A` still behaves like the selected row `SETUP` button; Engine+Editor `Cmd+A` opens AutoSetup for the currently loaded theme because the Library receiver is not mounted in that layout.
+
+### Autosetup Detailed Counter Placeholder
+
+- AutoSetup keeps the Simple/Detailed/Z-Depth mode row aligned in Detailed empty-state mode by showing a dimmed step counter instead of removing it.
+- Where: AutoSetup sheet > Detailed mode when no navigable groups are available.
+- Note: Detailed empty state should keep the top controls fixed while communicating that no step is currently available.
+
+### Autosetup Simple Manual Navigation Only
+
+- AutoSetup Simple mode now navigates only manually assigned steps; blank/unassigned Simple steps no longer appear as automatically mapped fallback groups when clicking through the overlay.
+- Where: AutoSetup overlay in Simple mode with only some Simple steps mapped, including holes such as only Step 3 assigned.
+- Note: The investigated stale-theme-cache hypothesis did not explain the reproduced symptom; the failing proof showed navigation-time fallback produced `totalGroups == 3` when only one Simple step was intentionally assigned.
+
 
 ## Settings
-
-### Automatic Update Install Handoff
-
-- Automatic updates can now finish the downloaded update more reliably because DMT leaves the final quit-and-install handoff with the updater.
-
-### Content Updates Local Pack Refresh
-
-- A newly imported manual pack such as `RED_v2.dmt` appears in Settings > Content Updates immediately when the sheet opens, without waiting for a remote manifest sync.
-- Where: Import/install a local pack, then open Settings > Content Updates before any background sync runs.
-
-### App Update Restart Handoff
-
-- Downloaded app updates now close open Settings surfaces before restarting, so installation can finish reliably even if Settings was left open.
-- Where: Settings window or attached sheet open during downloaded app update installation.
 
 ### Alert Sound Global Setting
 
@@ -48,6 +99,75 @@ These notes intentionally include customer-facing improvements only.
 
 - Dev Remote Test Mode content scenarios now override a real Software Update availability state while active.
 - Where: Software Update still wins when content remote test mode is not active.
+
+
+## Tracks
+
+### Generic Xml Library Tab
+
+- Self-Theming is now presented as Generic XML Mode, with a first-class Library header `XML` tab after Tracks and a Generic XML theme manager that mirrors the Library shell styling.
+- Where: DMT Library header > XML; Settings > Global > Document Mode / Generic XML Themes.
+- Note: Internal `selfTheme` API names remain as compatibility plumbing; user-facing language and schema examples now use Generic XML.
+
+### Tracks Directive Effective Analysis Sources
+
+- Switching the Tracks colour directive and skipping through themes now refreshes the effective analysis-source set, so non-qualifying parameters are visibly/effectively inactive and the remaining active sliders tune only sources that actually participate.
+- Where: Tracks GLOBAL directive cycling/CFG selection; theme navigation while Tracks is visible, including MAN mode; inline/CFG analysis toggles and weight bars.
+- Note: The effective profile remains non-destructive: saved user exclusions/weights are preserved, while directive/theme saturation gates determine what is active right now.
+
+### Tracks Analysis Global Vs Effective Refinement
+
+- GLOBAL analysis mode is freely editable again while PER THEME mode shows the current theme's effective qualified sources; SBG/Dsk now behave as a 50/50 inverse brightness mix, and VU/Trn are default-off optional contributors.
+- Where: Tracks inline analysis rows, CFG > ANALYSIS (ADV), PER THEME storage switch, SBG/Dsk weight sliders, theme/directive changes with saturated or low-chroma accent sources.
+- Note: The profile still keeps directive filtering non-destructive: user exclusions/weights are saved preferences, while per-theme effective activation is recomputed from directive, saturation, collision, and source contribution.
+
+### Tracks Analogous Surface Tone Anchor
+
+- ANA now respects reddish/brown theme surfaces as the theme tone instead of accepting opposite blue/cyan accents as analogous matches.
+- Where: Tracks ANA directive, theme navigation while PER THEME/effective analysis is visible, and harmony distance scoring for swatch selection.
+
+### Tracks Analysis Paint Collision Replacement
+
+- Inline Tracks analysis label click/paint now activates a deselected source and automatically turns off only active colliding sources, keeping non-colliding analysis sources active for a richer harmony feed.
+- Where: Tracks tuneables inline analysis source labels; click or drag-paint over inactive analysis sources.
+
+### Tracks Analysis Directive Disabled Button State
+
+- Inline Tracks analysis buttons now distinguish active, manually inactive, and directive-disabled states; the darker `#202322` state means the source is saved on but currently overridden by the colour directive/profile.
+- Where: Tracks tuneables inline analysis source labels when PER THEME/current directive filtering suppresses a source that remains enabled in user intent.
+
+### Tracks Per Theme Analysis Submit To Directive
+
+- PER THEME SBG/Dsk analysis weight edits now keep the reciprocal surface source active and persisted after release, and directive-disabled inline analysis sources no longer act as user activation targets.
+- Where: Tracks tuneables inline analysis weight bars and analysis labels in PER THEME mode, especially SBG/Dsk and directive-filtered accent sources.
+- Note: CFG overlay toggles were not changed; directive-filtered inline rows are still visibly represented by the directive-disabled state.
+
+### Tracks Directive Deactivated Inline Toggle Inert
+
+- Directive-deactivated inline Tracks analysis parameters are now inert: clicking or paint-dragging over them no longer turns them into user-disabled parameters.
+- Where: Tracks tuneables inline analysis labels and weight bars when the current colour directive/profile filters an otherwise enabled source.
+- Note: CFG overlay toggles remain unchanged; directive ownership is enforced only for the inline analysis block requested here.
+
+### Tracks Analysis Toggle Directive Refresh
+
+- Enabling an eligible inline analysis parameter no longer disables other parameters, and cycling colour directives now immediately refreshes the effective/deactivated analysis state from both the inline directive button and CFG GLOBAL rows.
+- Where: Tracks tuneables inline analysis label click/paint, inline directive cycling, CFG > GLOBAL directive rows.
+
+### Tracks Global Analysis Interaction Free
+
+- GLOBAL analysis mode, with PER THEME off, is freely interactive again; directive filtering no longer makes saved-on sources inert or dark in GLOBAL, while PER THEME still marks directive-filtered saved-on sources as directive-disabled and non-clickable.
+- Where: Tracks tuneables inline analysis labels and weight bars when PER THEME is toggled off/on.
+
+### Tracks Directive Luminance Filtering
+
+- Higher Tracks filter settings now gravitate toward theme-luminance-compatible swatches for TEMP and MONO instead of narrowing by hue/temperature alone.
+- Where: Tracks global colour directives, sensitivity slider/filtering, theme navigation/reanalysis.
+- Note: No Max/M4L palette fallback or write-path logic changed, preserving the filtered-index constraints from prior Tracks fixes.
+
+### Tracks Analysis Directive Persistence
+
+- Each Tracks colour directive now remembers its own analysis source toggle/weight state, including PER THEME storage, after directive switches, theme switches, and app reloads.
+- Where: Tracks tuneables/CFG analysis toggles, GLOBAL colour directive cycling, PER THEME/GLOBAL analysis storage, theme switching, and palette state load/save.
 
 
 ## Improvements
