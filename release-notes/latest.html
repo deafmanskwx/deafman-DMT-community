@@ -1,11 +1,9 @@
 <h2>Theme Library</h2>
 <ul>
   <li>Theme Library selection is fresh again when switching themes, avoiding stale warmed rows or a hidden mounted tree.</li>
-</ul>
-
-<h2>Editor</h2>
-<ul>
-  <li>The Theme Editor Rename Group modal text field now uses the fixed `#151515` dark fill, matching the existing Save Group Setup and Save Lock Group modal inputs.</li>
+  <li>Matrix slot-picker popup padding dashes now sit centered above and below the available theme rows instead of hugging the left edge.</li>
+  <li>Theme Library folders no longer auto-expand when pack-version shortcuts, filters, reloads, or selection sync rebuild the tree; expansion changes stay tied to folder-row clicks and the existing Cmd-click bulk folder action.</li>
+  <li>Theme Library now seeds the first loaded library tree fully expanded again, while later pack-version switches and refreshes still preserve the user&#39;s explicit folder expansion state.</li>
 </ul>
 
 <h2>Settings</h2>
@@ -15,9 +13,7 @@
 
 <h2>Tracks</h2>
 <ul>
-  <li>Tracks analysis profiles now stay in sync with colour directives, theme changes, PER THEME/GLOBAL modes, and app reloads.</li>
-  <li>Inline Tracks analysis controls are clearer and safer: editable sources, directive-disabled sources, and paint gestures now behave distinctly.</li>
-  <li>Tracks harmony filtering now follows the theme&#39;s surface tone and luminance more closely for ANA, TEMP, and MONO directives.</li>
   <li>Right-clicking the idle Tracks CLP chip now repeats the last successful clip-colouring action without reopening the selector.</li>
   <li>Tracks MAP saved-preset recall keeps the Presets list open after applying a preset.</li>
+  <li>Tracks CFG Analysis now trims the expanded panel height, removing unnecessary empty space at the bottom.</li>
 </ul>
