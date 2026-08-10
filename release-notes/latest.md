@@ -1,11 +1,13 @@
-# DMT Release Notes
+# DMT 2.0.4 Release Notes
 
 ## Highlights
 
-- DMT now introduces procedural themes through the new AutoSetup Z-Depth mode.
-- AutoSetup Z-Depth gives theme work a depth-aware workflow for shaping Master Grade, Near, Mid, and Far treatments together.
-- This release also includes a broad round of minor fixes, interface refinements, workflow improvements, and reliability enhancements across DMT.
+- Smoother onboarding and clearer guidance help you get into the right workflow faster.
+- Theme and font selection now starts from more useful choices and stays more consistent across sessions.
+- Content updates are easier to follow, with clearer progress and better continuity throughout the update experience.
+- Navigation, window behaviour, and feature presentation have been refined across the app.
+- Additional quality-of-life improvements make DMT feel more polished and predictable in day-to-day use.
 
 ## Notes
 
-This release focuses on making DMT feel smoother, more capable, and more predictable in day-to-day theme work, with AutoSetup Z-Depth as the headline addition.
+DMT 2.0.4 is a polish-focused release that improves the experience from first launch through everyday theme work.
