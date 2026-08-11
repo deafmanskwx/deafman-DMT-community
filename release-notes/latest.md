@@ -1,13 +1,10 @@
-# DMT 2.0.4 Release Notes
+# DMT 2.0.5 Release Notes
 
-## Highlights
+## Live Refresh
 
-- Smoother onboarding and clearer guidance help you get into the right workflow faster.
-- Theme and font selection now starts from more useful choices and stays more consistent across sessions.
-- Content updates are easier to follow, with clearer progress and better continuity throughout the update experience.
-- Navigation, window behaviour, and feature presentation have been refined across the app.
-- Additional quality-of-life improvements make DMT feel more polished and predictable in day-to-day use.
+- Aggressive Live Refresh now responds immediately when loading themes or using Theme Library Chevrons.
+- Rapid Chevron navigation reliably finishes on the last selected theme without duplicate refreshes.
 
 ## Notes
 
-DMT 2.0.4 is a polish-focused release that improves the experience from first launch through everyday theme work.
+DMT 2.0.5 restores the intended fast Live Refresh behaviour for theme loading and Theme Library navigation while keeping the final selected theme authoritative.
