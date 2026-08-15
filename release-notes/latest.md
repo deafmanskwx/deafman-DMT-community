@@ -1,4 +1,4 @@
-# DMT 2.1.0 Release Notes
+# DMT 2.1.1 Release Notes
 
 ## Highlights
 
@@ -11,4 +11,4 @@
 
 ## Notes
 
-DMT 2.1.0 is a workflow-focused release that makes moving between the Theme Library, Editor, AutoSetup, and Tracks faster, while giving advanced theme work more control and continuity.
+DMT 2.1.1 is a workflow-focused release that makes moving between the Theme Library, Editor, AutoSetup, and Tracks faster, while giving advanced theme work more control and continuity.
