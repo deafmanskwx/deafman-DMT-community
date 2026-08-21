@@ -1,14 +1,13 @@
-# DMT 2.1.1 Release Notes
+# DMT 2.1.2 Release Notes
 
 ## Highlights
 
-- Theme Library navigation is faster and more fluid, with arrow-key selection, Space to load, and Return to open AutoSetup.
-- AutoSetup now builds Detailed controls more intelligently, while Z-Depth adds three memory slots and a quick reset for all visible sliders.
-- AutoSetup keeps your place when you jump to reverse colour search or Tracks TweekMode, returning you to the exact mode and step you left.
-- The new Blend ColourOp gives groups direct opacity control, with predictable results across nested group structures.
-- Macro slot workflows are more dependable, with Group Presets easier to find, assign, restore, and preserve.
-- Editor and Theme Library organisation has been refined: colour-picked parameters can be added directly to groups, searched ColourOps reveal more cleanly, and imported folders can now be renamed or removed.
+- Content updates now keep your personal Setup choices safely in place while fresh factory content arrives around them.
+- AutoSetup slider resets are more dependable, returning visible controls to the values they had when the current session began—even after moving between modes or steps.
+- Reverse colour search and screen colour sampling shortcuts now work consistently with the key below Esc on both ANSI and ISO keyboards, with Shift optional.
+- Theme Editor keyboard navigation and frequently used meter and Macro controls stay more responsive during detailed theme work.
+- Moving between the Theme Library and Tracks feels smoother, with less repeated processing and better continuity throughout the session.
 
 ## Notes
 
-DMT 2.1.1 is a workflow-focused release that makes moving between the Theme Library, Editor, AutoSetup, and Tracks faster, while giving advanced theme work more control and continuity.
+DMT 2.1.2 is a refinement-focused release that protects the work you have already done, smooths out familiar workflows, and keeps DMT feeling quick and dependable from one task to the next.
