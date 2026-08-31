@@ -1,34 +1,32 @@
 # DMT 2.5.0 Release Notes
 
-## Auto Setup, Reworked
+DMT 2.5.0 updates Auto Setup, Perception editing, colour operators and theme refresh behaviour.
 
-DMT 2.5.0 makes Auto Setup faster to enter, easier to navigate and more focused in its new Expert layout.
+## Auto Setup
 
-- Move between Auto Setup areas more directly and open Tracks without losing your place in the Library.
-- Shape hue strips from Auto Setup alongside the existing group, macro and depth controls.
-- Window changes and Auto Setup presentation respond more quickly, even with larger theme libraries.
-- Clearer in-app guidance explains how Auto Setup and the Perception Map work together.
+- Auto Setup now uses a revised Expert layout with direct navigation between its areas.
+- Tracks can be opened without changing the current position in the Library.
+- Hue strips can now be adjusted alongside the existing group, macro and depth controls.
+- Auto Setup presentation and window changes have been adjusted to reduce delays, including with larger theme libraries.
+- In-app guidance now explains how Auto Setup works with the Perception Map.
 
-## Deeper Perception Editing
+## Perception Editing
 
-- Preview a Perception setup while editing before committing it to the theme.
-- Use the compensated-only HUD view to inspect the colours produced by appearance compensation.
-- Dark-theme compensation and Perception curve editing now produce more dependable results.
-- HLS hue controls and their gradients stay aligned throughout the editing range.
+- A Perception setup can now be previewed while editing before it is applied to the theme.
+- The compensated-only HUD view shows colours after appearance compensation.
+- Fixed issues with dark-theme compensation and editing Perception curves.
+- HLS hue controls and their displayed gradients now remain aligned across the editing range.
 
-## More Precise Colour Operations
+## Colour Operators
 
-- The new **Selective Hue** operator lets a theme target a chosen hue range without disturbing unrelated colours.
-- The new **Suppress** operator reduces the influence of selected colours when a theme needs more restraint.
-- Operator choices remain isolated to the theme being edited, and grade changes preserve their undo history.
+- Added the **Selective Hue** operator, which limits adjustments to a selected hue range.
+- Added the **Suppress** operator, which reduces the effect of selected colours.
+- Operator selections are stored per theme.
+- Grade changes remain available in the undo history.
 
-## Reliable Theme Delivery
+## Ableton Refresh and Library State
 
-- The new Ultra refresh option gives Ableton a stronger refresh path when an ordinary theme update is not enough.
-- Rendered theme changes reach Ableton more consistently.
-- Mirror sources and version choices remain stable when moving between related themes.
-- Library availability and Auto Setup readiness update sooner after content changes.
-
-## Notes
-
-This release turns Auto Setup into a quicker, more capable workspace while adding finer Perception and colour-shaping tools for demanding themes.
+- Added an Ultra refresh option for cases where the standard Ableton theme refresh does not update the displayed theme.
+- Ableton refresh now uses rendered theme artifacts.
+- Fixed mirror-source and version selection when switching between related themes.
+- Library availability and Auto Setup readiness now update sooner after content changes.
