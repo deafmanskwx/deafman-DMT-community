@@ -1,37 +1,34 @@
-# DMT 2.2.0 Release Notes
+# DMT 2.5.0 Release Notes
 
-## Meet the Perception Map
+## Auto Setup, Reworked
 
-DMT 2.2.0 brings a major colour-engine update, led by the new Perception Map for HLS editing. Shape how individual hues feel across the tonal range, then fine-tune shadows, mids and highlights until the whole theme sits just right.
+DMT 2.5.0 makes Auto Setup faster to enter, easier to navigate and more focused in its new Expert layout.
 
-- Work across the full map or adjust shadows, mids and highlights independently.
-- Save up to five favourite Perception Map profiles for quick recall.
-- HLS and OKLCH now follow the colour mode you selected throughout the editing workflow.
-- Colour previews, controls and window changes feel quicker and steadier while you work.
+- Move between Auto Setup areas more directly and open Tracks without losing your place in the Library.
+- Shape hue strips from Auto Setup alongside the existing group, macro and depth controls.
+- Window changes and Auto Setup presentation respond more quickly, even with larger theme libraries.
+- Clearer in-app guidance explains how Auto Setup and the Perception Map work together.
 
-## Tracks That Follow the Theme
+## Deeper Perception Editing
 
-- Themes can now include their own Tracks setup. Switch between a theme's **Content Preset** and your saved **Default** setup from Tracks Configuration.
-- Mirrored theme versions share their Tracks setup more naturally, keeping paired themes in step.
-- Theme changes reach Tracks more quickly and remain stable while moving between AutoSetup modes.
-- Hue filters now preserve the palette's row layout, so refining a palette no longer makes it jump around.
+- Preview a Perception setup while editing before committing it to the theme.
+- Use the compensated-only HUD view to inspect the colours produced by appearance compensation.
+- Dark-theme compensation and Perception curve editing now produce more dependable results.
+- HLS hue controls and their gradients stay aligned throughout the editing range.
 
-## A Bigger, Clearer Pack Library
+## More Precise Colour Operations
 
-DMT is ready for the return of favourite legacy packs through Content Updates, bringing more choice back to the Library without disturbing the packs you already use.
+- The new **Selective Hue** operator lets a theme target a chosen hue range without disturbing unrelated colours.
+- The new **Suppress** operator reduces the influence of selected colours when a theme needs more restraint.
+- Operator choices remain isolated to the theme being edited, and grade changes preserve their undo history.
 
-- Multiple generations of a theme pack can live happily alongside one another.
-- COMPLETE is represented as the collection you installed, without its bundled families appearing as separate unavailable installs.
-- Installed pack versions are recognised more accurately after a refresh or relaunch, while independently installed packs remain visible in their own right.
+## Reliable Theme Delivery
 
-## Everyday Polish
-
-- Theme selection feels more immediate, and AutoSetup opens more reliably from the Library.
-- The Editor remembers its sort direction separately for each mode.
-- SEG and UNI meter shortcuts now always select the mode shown on the button.
-- Tracks' Tweek version panel closes cleanly, and DMT's windows resize more smoothly between layouts.
-- Factory themes remain available and recover cleanly after a reset.
+- The new Ultra refresh option gives Ableton a stronger refresh path when an ordinary theme update is not enough.
+- Rendered theme changes reach Ableton more consistently.
+- Mirror sources and version choices remain stable when moving between related themes.
+- Library availability and Auto Setup readiness update sooner after content changes.
 
 ## Notes
 
-This release makes colour work more expressive, Tracks setups more portable and everyday editing faster and more dependable.
+This release turns Auto Setup into a quicker, more capable workspace while adding finer Perception and colour-shaping tools for demanding themes.
