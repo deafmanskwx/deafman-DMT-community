@@ -1,6 +1,6 @@
-# DMT 2.5.1 Release Notes
+# DMT 2.5.2 Release Notes
 
-DMT 2.5.1 improves colour workflow consistency, adds more precise curve editing, and resolves issues with version commits and matrix injection.
+DMT 2.5.2 improves colour workflow consistency, adds more precise curve editing, and resolves issues with version commits and matrix injection.
 
 ## Improvements
 
