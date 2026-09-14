@@ -1,6 +1,6 @@
-# DMT 2.6.0 Release Notes
+# DMT 2.6.1 Release Notes
 
-DMT 2.6.0 adds reusable custom colour operators and a continuous, brightness-linked Perception Map. It also improves editing and navigation, reduces interface delays, and fixes issues with theme loading, font installation, and history storage.
+DMT 2.6.1 adds reusable custom colour operators and a continuous, brightness-linked Perception Map. It also improves editing and navigation, reduces interface delays, and fixes issues with theme loading, font installation, and history storage.
 
 ## Additions
 
