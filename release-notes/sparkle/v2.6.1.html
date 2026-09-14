@@ -1,0 +1,32 @@
+<h2>DMT 2.6.1</h2>
+<p>DMT 2.6.1 adds reusable custom colour operators and a continuous, brightness-linked Perception Map. It also improves editing and navigation, reduces interface delays, and fixes issues with theme loading, font installation, and history storage.</p>
+<h3>Additions</h3>
+<ul>
+  <li>Macros can now be saved as <strong>Custom ColourOPs</strong> and reused in other theme groups. The Operators browser supports folders, favourites, search, and comments, with drag-and-drop insertion into a group.</li>
+  <li>Factory colour operators can also be browsed in the engine pane, with category filters, search, favourites, and drag-and-drop insertion into groups.</li>
+  <li>The <strong>Perception Map</strong> now morphs continuously with brightness, replacing the fixed tone bands. Curves can be edited at any lightness, and calibration markers can be moved with Shift-drag or removed. Existing saved curves are carried forward.</li>
+  <li>Swatches now have three display sizes, with separate scroll positions retained for History and Memory.</li>
+  <li>The new <strong>Clamp</strong> option limits chroma to the usable sRGB range as hue and lightness change.</li>
+  <li>Title-bar controls provide direct access to <strong>Always on Top</strong> and the <strong>Ultra, Aggressive, and Conservative</strong> refresh modes. They remain available in the two-pane layout.</li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+  <li>In the Library, <strong>Shift–Up/Down</strong> loads the previous or next theme, and <strong>Shift–Left/Right</strong> switches between saved versions.</li>
+  <li>After <strong>Cmd–F</strong>, <strong>Tab</strong> switches between parameter and group search while retaining the query. Pressing <strong>Enter</strong> on a highlighted editor group now selects it as well as expanding or collapsing it.</li>
+  <li>Editor group headers now have a <strong>+</strong> menu for adding colour operators. <strong>Move to Group</strong> menus follow the editor's ordering and show nested groups with indentation.</li>
+  <li>Clicking a <strong>MACRO</strong> badge opens the Macro Editor. Soloed macros keep their <strong>S</strong> control visible when collapsed.</li>
+  <li><strong>Selective Hue</strong> and <strong>Suppress</strong> can target the selected parameter's hue at the operator's input, making targeting easier when other operators change the displayed colour.</li>
+  <li>Auto Setup hides duplicate controls when they are already available in an operator's inline hue strip.</li>
+  <li>Colour sliders, Perception Map updates, Tracks sensitivity adjustments, and opening or closing Version View are more responsive.</li>
+  <li>Theme and snapshot loads now open Master Grade with the other groups collapsed, reducing initial editor redraws.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+  <li>Manual edits and colour operators now distinguish identically named parameters in different groups. Slider positions remain stable when moving between manual edits and operators, including hue adjustments on neutral colours.</li>
+  <li><strong>Pick to Swap</strong> now confirms the clicked search match and provides a <strong>Swap</strong> button for the highlighted result.</li>
+  <li>Themes can be loaded by double-clicking in the Library while Version View is open. Clicking the same theme's version indicators again closes Version View.</li>
+  <li>Font installation now recognises compatible original-font backups after an Ableton Live update, avoiding unnecessary reinstall prompts.</li>
+  <li>History saves no longer create a new recovery backup for every edit, limiting further disk growth while preserving factory state and saved snapshots.</li>
+  <li>Expanding and collapsing panels better preserves window position, and focus changes restore the intended layout more reliably, including the return to Library-only view.</li>
+  <li>Theme-loading progress bars no longer remain filled after their animation finishes.</li>
+</ul>
