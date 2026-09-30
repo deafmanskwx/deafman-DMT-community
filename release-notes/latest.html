@@ -1,33 +1,14 @@
-<h2>DMT 2.7.0</h2>
-<p>DMT 2.7.0 adds HELMLAB colour editing and multi-point editing in the Perception Map. It also improves group organisation, version navigation, and the handling of saved themes.</p>
-<h3>Additions</h3>
+<h2>DMT 2.7.1</h2>
+<p>This update improves Auto Setup, theme saving and recovery, and editor navigation. It also reduces repeated calculations in the Perception Map and Tracks.</p>
 <ul>
-  <li><strong>HELMLAB</strong> is now available alongside OKLCH and HLS, with its own hue, chroma, and lightness controls. Hue and saturation operators also support the space, and undo restores the colour mode with the edit. The HUD shows HELMLAB values for the displayed colour.</li>
-  <li>The <strong>Perception Map</strong> supports selecting and moving several curve points together. Shift-drag the background to select points, then drag the selection or press Delete to remove it. Individual points can also be removed with a right-click.</li>
-</ul>
-<h3>Improvements</h3>
-<ul>
-  <li>Perception curves retain their existing control-point layout as brightness changes, avoiding extra points between saved calibrations.</li>
-  <li>Collapsing the Perception Map stops its editor from recalculating during colour-slider adjustments, reducing unnecessary work.</li>
-  <li><strong>New Group from Selection</strong> now creates the group inside the source group, keeping the selected parameters within their existing hierarchy.</li>
-  <li>Adding or dropping a colour operator into a group from search results now clears the search and reveals the edited group.</li>
-  <li>Soloing a macro in Auto Setup expands it and collapses the other macros in that step, while keeping their headers available. Clicking another macro's header transfers Solo to it.</li>
-  <li>Matrix pack labels now indicate which packs supply themes to assigned slots.</li>
-  <li>Engine settings collapse when switching to a layout that hides the Engine pane.</li>
-  <li>In the Library, <strong>Shift–Up/Down</strong> loads the previous or next theme.</li>
-  <li>In Library-only view, <strong>Shift–Left/Right</strong> switches between saved versions without first clicking back into the theme list. Text fields retain their normal keyboard behaviour.</li>
-  <li>User snapshots and theme revisions can now be deleted while active when a replacement state is available. DMT restores a remaining snapshot or recoverable factory state. Locally deleted revisions stay removed after later imports and saves.</li>
-</ul>
-<h3>Fixes</h3>
-<ul>
-  <li>Fixed an issue that prevented <strong>Custom ColourOPs</strong> from being saved or edited. Saved operators appear in the Custom library and can be reopened in the Macro Editor.</li>
-  <li>Switching colour modes or changing <strong>Red to 0°</strong> preserves the current colour instead of reinterpreting its slider values.</li>
-  <li><strong>Clamp</strong> now limits the Chroma slider's range without reducing the stored chroma when hue or lightness changes. The separate <strong>sRGB</strong> setting controls how colours outside the sRGB range are rendered.</li>
-  <li>Perception calibration markers remain at the same lightness when hue or chroma changes.</li>
-  <li>Editor search confirms the selected group consistently. Arrow keys in text fields no longer trigger unrelated editor navigation or hue changes.</li>
-  <li>Distinct groups with the same name survive theme switches and reloads. Loading another theme also clears the previous theme's locked-group filter.</li>
-  <li>Renaming an imported-theme folder preserves its themes' working and recovery state. Deleting imported themes also removes their associated recovery data.</li>
-  <li>Imports retain separate theme revisions with identical colours instead of discarding them as duplicates.</li>
-  <li><strong>Autorefresh</strong> remembers its setting between sessions, and turning it off cancels a pending automatic save.</li>
-  <li>Content updates remember intentionally uninstalled pack versions after restarting DMT, avoiding unwanted downloads.</li>
+  <li><strong>Cmd–H</strong> opens edit History; <strong>Escape</strong> closes it. Double-click a parameter or group search result to confirm it and reveal the selection.</li>
+  <li>The Operators browser remembers the choice between <strong>Factory</strong> and <strong>Custom</strong> operators between sessions.</li>
+  <li><strong>Reset Slider</strong> now returns Auto Setup sliders to their neutral 50% position. Z-Depth group resets also centre the selected sliders when an assignment cannot update its target.</li>
+  <li>Saved Auto Setup slider positions and colour edits restore correctly when reopening a theme. Simple controls stay in Simple mode, and switching themes or setup modes keeps each theme's colours and controls separate.</li>
+  <li>Theme versions restore their own controls and colours, including older flat-layout snapshots. Switching versions saves departing edits first and stops if that save fails. Deleted snapshots stay removed after imports.</li>
+  <li>Snapshot creation reports save failures and keeps current edits available for retry. Undo after a manual colour edit retains the preceding macro or operator changes.</li>
+  <li><strong>Recover Current Edits</strong> saves the current session when its working copy is unreadable, backing up that file and preserving the previous readable checkpoint. Removing active content also saves pending edits first.</li>
+  <li>Engine colour edits refresh Live immediately with Autorefresh enabled. Aggressive refresh sends a restored theme once, and queued updates keep their order.</li>
+  <li>The Perception Map and Tracks reuse unchanged calculations. The map stops updating while the Engine pane is hidden after its initial layout, and calibration-marker edits finish when a Shift-drag ends or the panel closes.</li>
+  <li>The § reverse-search shortcut recognizes the focused parameter search field. Left and right arrows retain normal text-cursor movement.</li>
 </ul>
