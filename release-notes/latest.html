@@ -1,14 +1,6 @@
-<h2>DMT 2.7.1</h2>
-<p>This update improves Auto Setup, theme saving and recovery, and editor navigation. It also reduces repeated calculations in the Perception Map and Tracks.</p>
+<h2>DMT 2.7.2</h2>
+<p>This hotfix removes the delay when selecting groups and parameters in the editor.</p>
 <ul>
-  <li><strong>Cmd–H</strong> opens edit History; <strong>Escape</strong> closes it. Double-click a parameter or group search result to confirm it and reveal the selection.</li>
-  <li>The Operators browser remembers the choice between <strong>Factory</strong> and <strong>Custom</strong> operators between sessions.</li>
-  <li><strong>Reset Slider</strong> now returns Auto Setup sliders to their neutral 50% position. Z-Depth group resets also centre the selected sliders when an assignment cannot update its target.</li>
-  <li>Saved Auto Setup slider positions and colour edits restore correctly when reopening a theme. Simple controls stay in Simple mode, and switching themes or setup modes keeps each theme's colours and controls separate.</li>
-  <li>Theme versions restore their own controls and colours, including older flat-layout snapshots. Switching versions saves departing edits first and stops if that save fails. Deleted snapshots stay removed after imports.</li>
-  <li>Snapshot creation reports save failures and keeps current edits available for retry. Undo after a manual colour edit retains the preceding macro or operator changes.</li>
-  <li><strong>Recover Current Edits</strong> saves the current session when its working copy is unreadable, backing up that file and preserving the previous readable checkpoint. Removing active content also saves pending edits first.</li>
-  <li>Engine colour edits refresh Live immediately with Autorefresh enabled. Aggressive refresh sends a restored theme once, and queued updates keep their order.</li>
-  <li>The Perception Map and Tracks reuse unchanged calculations. The map stops updating while the Engine pane is hidden after its initial layout, and calibration-marker edits finish when a Shift-drag ends or the panel closes.</li>
-  <li>The § reverse-search shortcut recognizes the focused parameter search field. Left and right arrows retain normal text-cursor movement.</li>
+  <li>The selection frame now updates as soon as you press the mouse button.</li>
+  <li>Double-clicking search results still confirms and reveals the selection. Command-click selection and group header controls continue to work.</li>
 </ul>
