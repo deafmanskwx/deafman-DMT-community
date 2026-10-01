@@ -1,8 +1,10 @@
-# DMT 2.7.2 Release Notes
+# DMT 2.7.3 Release Notes
 
-This hotfix removes the delay when selecting groups and parameters in the editor.
+This hotfix removes the delay before colour-operator and blend edits reach Ableton Live when Autorefresh is enabled.
 
 ## Fixes
 
-- The selection frame now updates as soon as you press the mouse button, without waiting to see whether the click becomes a double-click.
-- Double-clicking a parameter or group search result still confirms it, clears the search, and reveals the selection. Command-click selection, dragging, and group header controls continue to work.
+- Colour-operator slider edits now refresh Live as soon as the slider is released, without waiting for the automatic-save timer.
+- Blend-value edits now refresh Live immediately, matching the Engine colour controls. This applies in Ultra, Aggressive, and Conservative refresh modes.
+- Rapid consecutive operator and blend edits keep the latest state without a second, delayed refresh from the save timer.
+- If saving an edit fails, DMT retains the edited state, reports the error, and keeps the scheduled save retry.
