@@ -1,13 +1,10 @@
-# DMT 2.7.4 Release Notes
+# DMT 2.7.5 Release Notes
 
-This release adds Invert and Vibrance colour operators and makes completed Grade edits refresh Ableton Live immediately when Autorefresh is enabled.
-
-## Added
-
-- **Invert** blends colours towards their RGB negative while preserving transparency. Adjust the amount from 0% to 100%; 0% leaves colours unchanged and 100% fully inverts them. Find it below Blend in the operator menu.
-- **Vibrance** boosts muted colours more than already saturated accents, while keeping neutral greys neutral. Its -100% to +100% range also lets you reduce colourfulness; 0% leaves colours unchanged and -100% removes colourfulness. Find it alongside the colour operators.
-- Both operators show their amounts as percentages and start at 0%, so adding them leaves the current appearance unchanged.
+This release improves colour swapping, reverse search, and AutoSetup navigation.
 
 ## Fixes
 
-- Completed Grade edits now refresh Live immediately in Ultra, Aggressive, and Conservative refresh modes, matching the Engine colour controls. Changes made during a drag are sent when the edit is finished, without waiting for the automatic-save timer or causing a second delayed refresh.
+- **Colour swapping** now exchanges the displayed colours, including transparency, when colour operators are active. Existing operators and group locks are preserved, and the swap can be undone as one change. If a swap cannot be completed, DMT explains why and leaves both colours unchanged.
+- **Reverse search** now works while either the Colours or Blend search field has focus. Starting reverse search from Blend returns to Colours and opens the colour picker.
+- **AutoSetup macro selection** now follows the saved step when loading another theme, including an intentionally empty step. The panel updates without retaining the previous theme's selection.
+- The Engine status bar now remains fully visible after returning from AutoSetup.
