@@ -1,30 +1,28 @@
-# DMT 2.8.2 Release Notes
+# DMT 2.8.3 Release Notes
 
-Automatic clip colouring can now retain different clip colour groups. This release also adds reverse harmony-directive cycling and screen-picker mode indicators.
+Shift hue selectively by saturation or lightness, and keep manually chosen clip colours when tracks are recoloured.
 
-## Preserve clip colour groups
+## Selective Property colour operator
 
-In Tracks, open **CFG > CLIP COLOURING** and enable **PRESERVE EDITS**. Use it with automatic clip colouring, enabled by **Command-clicking CLP**.
+Add **Selective Property** from a group's colour-operator menu or the Library's **Selective** colour-operator filter.
 
-The most common existing clip colour becomes the main group and follows the track colour. Other colour groups receive the treatment you choose:
+- **Saturation:** shift more saturated colours while leaving muted colours below the threshold unchanged.
+- **Luma:** select by perceptual lightness to shift brighter colours while leaving darker colours below the threshold unchanged.
+- **Shift:** rotate the selected colours' hue by up to 180 degrees in either direction.
+- **Threshold and spread:** drag the solid cursor to set the threshold and the right bracket to adjust the soft spread. Colours at or below the threshold stay unchanged; spread fades the hue shift in above it.
 
-- **ANALOGOUS:** lighter and darker shades of the track colour.
-- **COMPLEMENTARY:** contrasting hues opposite the track colour.
-- **LUMA:** greyscale colours.
-- **RAND:** consistent random colours for each group.
+Shift, Threshold and Spread support macro control. Selective Property can also be included in custom colour operators.
 
-Clips that shared a source colour stay together as you recolour Session and Arrangement clips. These choices are saved per theme and stay the same when switching harmony directives. Clip updates with PRESERVE EDITS enabled also run in smaller steps to keep Live responsive.
+## Keep current clip edit colours
 
-PRESERVE EDITS is off by default. Enable it before recolouring to retain existing colour groups; it cannot recover differences that have already been flattened to one colour.
+In Tracks, open **CFG > CLIP COLOURING**, enable **PRESERVE EDITS** and choose **KEEP CURRENT**. Use it with automatic clip colouring, enabled by **Command-clicking CLP**.
 
-## Cycle harmony directives in either direction
+The main clip colour group follows the track colour. Other groups keep their current colours, including later manual edits, across Session and Arrangement clips.
 
-**Click** the Tracks harmony-directive label to cycle forwards. **Shift-click** to cycle backwards through ANA, COMP, TEMP, MONO and DESAT.
+KEEP CURRENT is the initial preservation choice. Existing saved choices are retained, and switching PRESERVE EDITS off and on remembers your last selection. ANALOGOUS, COMPLEMENTARY, LUMA and RAND remain available when you want to recolour the other groups.
 
-## Screen-picker modes
-
-The screen picker now shows **P** when finding a parameter from a sampled colour, or **C** when choosing a colour to apply.
+PRESERVE EDITS remains off by default. Enable it before recolouring to retain existing colour differences; it cannot recover differences that have already been flattened to one colour.
 
 ## Live device update
 
-Replace the **DMT-Tracks Max for Live device** in your Live set with the device included in this version to use the new clip-colouring controls.
+Replace the **DMT-Tracks Max for Live device** in your Live set with the device included in this version to use KEEP CURRENT.
