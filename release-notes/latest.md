@@ -1,24 +1,24 @@
-# DMT 2.9.3 Release Notes
+# DMT 2.9.4 Release Notes
 
-In Tracks, you can capture a Live set’s group colours, try another scheme in MAP, and return to the captured colours. Quick Start now adapts its lessons to the controls visible in your window.
+You can now use your Live 12 themes in Ableton Live 13 Beta. Select **Live 13 Beta** at the top of the Library and load a theme as usual. DMT converts it when you load it and keeps the Live 12 original.
 
-**If you use Tracks, replace the DMT-Tracks Max for Live device in your set after updating.** Drag the new device from the **amxd** handle in Tracks to use the updated MAP modes and palette sorting.
+**DMT’s support for Live 13 is also in beta.** Some colours or contrasts may look slightly off in converted themes, especially on controls new to Live 13. We’ll refine the conversion in upcoming updates.
 
-## MAP rules
+**If you use Tracks, replace the DMT-Tracks Max for Live device in your set after updating.** Drag the new device from the **amxd** handle in Tracks.
 
-- **CONVERT** captures the Live colours of group headers and members, including nested groups. Converted rules start in **AUTO**. Choose **OVER** to try a manual swatch, then switch back to **AUTO** to restore the capture. Returning to **OVER** recalls your edit. Use **UPDATE** when you want the current Live colours to become the new capture.
-- Set a group header to **CFG** to colour the header and its **AUTO** members using the current group settings in **Options**. Members set to **OVER** keep their manual swatches. Changes in Options reapply while MAP is active.
-- Click a rule to select it. **COL** and **EXP** keep that selection as you collapse and expand the list. Selecting a group header highlights its group outline. Selecting a member highlights just its row, even in a nested group.
+## Themes in Live 13 Beta
 
-## Tracks
+- DMT carries over compatible colours and blend values. For new controls such as the sequencer’s velocity indicator, it uses colours already in the theme.
+- Updated theme packs can include separate Live 12 and Live 13 versions under one Library entry. DMT loads the version for the selected installation. Your favourites, history, and Tracks setup stay with the theme.
+- Shared colour edits follow the theme between targets. You can also give a Live 13-only control its own colour.
 
-- With **AUTO** and **ALL** active, **PING-PONG** moves across the selected **FACTORY** or **GRADED** palette one row at a time, reversing direction on alternate rows and skipping disabled swatches. **SPREAD** starts at the first enabled swatch and picks the colour farthest from those already chosen. If two colours are equally far away, their order in the grid decides which comes next.
-- In **Options**, use the **ENABLED** or **DISABLED** row under **TRACK COLOUR** or **GROUP COLOUR** to toggle colouring. With **AUD** or **MID** on, choose **LINK TO TRACK** to make groups follow the track colour scheme and **UNIFORM** setting. Unlink to restore your separate group settings. You can assign these controls to any of the four shortcut slots.
-- For horizontal clip ranges, choose **LINEAR**, **REVERSE** or **CYCLE** in **CFG > CLIP SORT ORDER**. Existing clip sort shortcuts still work.
+## Working with multiple installations
 
-## Quick Start, swatches and help
+- If you have several Live releases or betas installed, left-click the corresponding target button to choose one. The two buttons remember their selections independently, including after you reopen DMT. Switch from Live 13 Beta to Live 12 Suite and the beta button still shows Live 13 Beta.
+- Switching targets applies the current theme to the selected installation. Matrix keeps separate slot assignments for each installation and writes the light and dark themes there.
+- Tracks sends commands to the selected Live process, even when another Live installation is open. Font installation and restoration also use the selected Live application.
 
-- Start Quick Start from **Settings** while you’re working in Tracks. The tour keeps the Tracks panel open at your current window size.
-- When a Quick Start lesson needs a loaded theme, click **Choose a theme** and double-click a theme in the Library. The tour resumes at the same lesson when the theme loads. Choose **Continue without a theme** to visit the remaining controls that work without one.
-- The source and destination swatches show transparent colours over a checkerboard, so you can see the opacity of the original colour alongside your edit.
-- Search the in-app help for **custom operator** or **Custom OP** to find the guide to saving a single-group colour macro as a reusable operator. The shortcut reference, manual and UI Atlas now use the same terms. The save command is **Save as Custom ColourOP**.
+## Tracks and Auto Setup
+
+- In Tracks, hue family filters respond immediately as you add or exclude colours from the palette.
+- In Auto Setup, a slider mapped directly to **Shift** on a **Selective Property** operator now shows the hue shift in degrees.
